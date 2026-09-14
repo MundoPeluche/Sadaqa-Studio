@@ -1,0 +1,47 @@
+SADACLONE
+=========
+
+Estado: GANADOR / FUNCIONAL
+
+Motor:
+Qwen3-TTS 0.6B Base
+
+Modelo:
+Qwen/Qwen3-TTS-12Hz-0.6B-Base
+
+Ejecución:
+- CPU
+- Sin GPU NVIDIA
+- Sin Flash Attention
+
+Configuración ganadora:
+device_map = "cpu"
+dtype = torch.float32
+x_vector_only_mode = True
+non_streaming_mode = True
+
+Modo usado:
+Voice Clone
+
+Funciones comprobadas:
+- Clonación de voz desde audio de referencia
+- Español
+- Generación fluida
+- No requiere transcripción exacta del audio de referencia
+- Mejor resultado que la prueba con ref_text
+
+Prueba ganadora:
+Prueba 3
+
+Texto usado:
+"Hola. Esto es SadaClone. Ahora estoy probando una versión más natural de mi voz.
+Quiero hablar con claridad, manteniendo mi identidad y mi forma de expresarme."
+
+Resultado:
+Fluido, sin tartamudeo fuerte.
+Se decidió conservar esta configuración como base oficial de SadaClone.
+
+IMPORTANTE:
+- El modelo local NO debe subirse a GitHub.
+- Se puede volver a descargar desde Hugging Face.
+- Los audios de referencia tampoco deben subirse al repositorio.

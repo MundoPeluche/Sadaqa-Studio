@@ -1,0 +1,28 @@
+SADAVISION
+==========
+
+Estado: GANADOR / FUNCIONAL
+
+Motor:
+GeniGPT
+
+Proveedor:
+Prexzy
+
+Funciones comprobadas:
+- Text-to-Image
+- Image-to-Image / Image Edit
+- Uso de imagen de referencia por URL
+- Generación correcta de texto dentro de la imagen
+
+Prueba destacada:
+Generó correctamente el texto "SADAVISION".
+
+Arquitectura:
+SadaVision utiliza un servicio remoto.
+El modelo NO necesita almacenarse localmente en la computadora.
+
+IMPORTANTE:
+- No usar Agnes Image como SadaVision.
+- No almacenar API keys o tokens en este repositorio.
+- Las credenciales deben guardarse como secretos del backend.

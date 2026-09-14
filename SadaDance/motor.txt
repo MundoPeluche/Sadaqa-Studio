@@ -1,0 +1,29 @@
+SADADANCE
+==========
+
+Estado: GANADOR / FUNCIONAL
+
+Motor:
+Agnes Video V2.0
+
+Model ID:
+agnes-video-v2.0
+
+Proveedor:
+Agnes AI
+
+Funciones comprobadas:
+- Text-to-Video (T2V)
+- Image-to-Video (I2V)
+- Generación de video con audio
+- Uso de imágenes de referencia
+
+Arquitectura:
+SadaDance utiliza la API remota de Agnes.
+El modelo NO necesita almacenarse localmente dentro de Sadaqa Studio.
+
+IMPORTANTE:
+- Agnes Video pertenece exclusivamente a SadaDance.
+- No utilizar Agnes Image como SadaVision.
+- Nunca almacenar API keys en este repositorio.
+- Las API keys deberán almacenarse como secretos del backend.

@@ -1,0 +1,42 @@
+SADAEDIT
+========
+
+Estado: GANADOR / FUNCIONAL
+
+Motor:
+Agnes Image 2.1 Flash
+
+Model ID:
+agnes-image-2.1-flash
+
+Proveedor:
+Agnes AI
+
+Funciones comprobadas:
+- Image-to-Image / edición de imágenes
+- Cambio de ropa
+- Conservación del rostro
+- Conservación de la identidad
+- Conservación de la pose
+- Conservación del fondo
+- Edición mediante imagen de referencia
+
+Prueba realizada:
+Se cambió únicamente la vestimenta de una persona,
+manteniendo correctamente identidad, pose y fondo.
+
+REGLA DE SADAEDIT:
+Conservar automáticamente el ancho, alto y relación
+de aspecto de la imagen original, excepto cuando
+el usuario solicite explícitamente otra resolución.
+
+Arquitectura:
+SadaEdit utiliza la API remota de Agnes.
+El modelo no necesita almacenarse localmente.
+
+IMPORTANTE:
+- Agnes Image 2.1 Flash pertenece a SadaEdit.
+- No confundir SadaEdit con SadaVision.
+- No almacenar API keys en GitHub.
+- Las credenciales deben almacenarse como secretos
+  del backend de Sadaqa Studio.

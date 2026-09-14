@@ -1,0 +1,55 @@
+SADAERASE IMAGE
+===============
+
+Estado: GANADOR / FUNCIONAL
+
+Función:
+Eliminación de objetos de imágenes.
+
+Motor:
+LaMa (Large Mask Inpainting)
+
+Backend utilizado para las pruebas:
+IOPaint 1.6.0
+
+Ejecución:
+- Local
+- CPU
+- No requiere GPU NVIDIA
+- Gratuito
+- Sin límite de generaciones impuesto por una API
+
+Modelo local probado:
+big-lama.pt
+
+Funcionamiento:
+Imagen + máscara del objeto
+        ↓
+LaMa
+        ↓
+Reconstrucción de la zona eliminada
+        ↓
+Imagen resultante
+
+Prueba realizada:
+Se eliminaron correctamente objetos seleccionados de una fotografía.
+
+Resultado:
+FUNCIONÓ correctamente.
+
+Arquitectura final:
+IOPaint NO será la interfaz visible de Sadaqa Studio.
+SadaErase tendrá su propia interfaz y utilizará LaMa como motor interno.
+
+Objetivo futuro:
+Permitir seleccionar automáticamente un objeto sin obligar al usuario
+a pintar manualmente toda la máscara.
+
+IMPORTANTE:
+- No subir big-lama.pt a GitHub.
+- El modelo puede volver a descargarse.
+- No subir el entorno virtual venv.
+- IOPaint es backend/herramienta de integración, no la marca mostrada al usuario.
+
+SadaErase Image:
+LaMa / IOPaint backend = GANADOR
