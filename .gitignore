@@ -1,0 +1,35 @@
+# Entornos virtuales
+venv/
+.venv/
+
+# Cachés
+__pycache__/
+*.pyc
+.cache/
+
+# Modelos pesados
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.onnx
+
+# Audio/video de prueba
+*.wav
+*.mp3
+*.mp4
+*.mov
+
+# Secretos y claves
+.env
+*.env
+secrets.*
+*secret*
+*apikey*
+*api_key*
+*token*
+
+# Sistema
+.DS_Store
+Thumbs.db
