@@ -1,27 +1,87 @@
-SADADANCE
+# SADADANCE
 ==========
 
-Estado: GANADOR / FUNCIONAL
+Estado: 🚧 EN DESARROLLO / WIP
 
 Motor:
-Agnes Video V2.0
+MiniMax H3
 
-Model ID:
-agnes-video-v2.0
+Configuraciones principales:
+- FL2VA
+- Ref2VA
 
-Proveedor:
-Agnes AI
+SadaDance es el módulo de generación de video de Sadaqa Studio.
+Actualmente se encuentra en proceso de migración e integración con
+MiniMax H3 como nuevo motor de generación.
 
-Funciones comprobadas:
-- Text-to-Video (T2V)
-- Image-to-Video (I2V)
-- Generación de video con audio
-- Uso de imágenes de referencia
+FUNCIONES OBJETIVO:
+- Texto a video (T2V) con audio nativo.
+- Imagen a video (I2V) con audio.
+- Generación de video y audio sincronizados.
+- First/Last Frame cuando sea compatible.
+- Uso de imágenes y videos de referencia.
+- Uso de audio de referencia como condicionamiento real de la generación.
 
-Arquitectura:
-SadaDance utiliza la API remota de Agnes.
-El modelo NO necesita almacenarse localmente dentro de Sadaqa Studio.
+CONFIGURACIONES:
 
+FL2VA:
+Destinado principalmente a la generación normal:
+- Text-to-Video.
+- Image-to-Video.
+- First/Last Frame cuando sea compatible.
+- Generación audiovisual nativa.
+
+Ref2VA:
+Destinado a generación condicionada mediante referencias:
+- Imágenes de referencia.
+- Video de referencia.
+- Audio de referencia.
+- Generación audiovisual basada en referencias.
+
+PRUEBAS DE VALIDACIÓN:
+
+MiniMax H3 todavía debe superar tres pruebas antes de ser aprobado
+definitivamente como motor de SadaDance:
+
+1. T2V
+   Generar un video desde un prompt y comprobar video + audio nativo.
+
+2. I2V
+   Generar un video desde una imagen y comprobar fidelidad,
+   movimiento y audio.
+
+3. I2V + AUDIO DE REFERENCIA
+   Utilizar una imagen junto con audio de referencia como
+   condicionamiento real de la generación y comprobar la
+   sincronización audiovisual.
+
+Si las tres pruebas funcionan correctamente, MiniMax H3 será
+considerado el motor funcional de SadaDance.
+
+ARQUITECTURA:
+
+SadaDance
+   ↓
+Backend / Worker GPU
+   ↓
+MiniMax H3
+   ├── FL2VA
+   └── Ref2VA
+   ↓
+Video + Audio
+
+Los pesos de MiniMax H3 NO se almacenan directamente en este
+repositorio debido a su gran tamaño.
+
+IMPORTANTE:
+- MiniMax H3 pertenece al backend de SadaDance.
+- El nombre del motor no debe mostrarse en la interfaz pública
+  de Sadaqa Studio.
+- SadaDance todavía se encuentra en desarrollo.
+- El backend definitivo todavía está en evaluación.
+- No almacenar pesos .safetensors en GitHub.
+- No almacenar claves API, tokens, credenciales ni enlaces
+  privados de almacenamiento en este repositorio.
 IMPORTANTE:
 - Agnes Video pertenece exclusivamente a SadaDance.
 - No utilizar Agnes Image como SadaVision.
